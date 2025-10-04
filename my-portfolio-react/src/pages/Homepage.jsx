@@ -11,6 +11,7 @@ import SkillsTools from '../components/SkillTools';
 export default function Homepage(){
     const location = useLocation();
     const [showMessageModal, setShowMessageModal] = useState(false);
+    const [isSent, setIsSent] = useState(false);
     
     useEffect(() => {
         if (location.hash) {
@@ -86,31 +87,48 @@ export default function Homepage(){
                     <div className="message-modal">
                         <div className="message-modal-content">
                             <button className="close-btn" onClick={() => setShowMessageModal(false)}><FontAwesomeIcon icon={faCircleXmark} className='close-button'/></button>
-                            <h2>Send me a message</h2>
-                            <form
-                                onSubmit={async (e) => {
-                                    e.preventDefault();
-                                    const formData = {
-                                        name: e.target[0].value,
-                                        email: e.target[1].value,
-                                        subject: e.target[2].value,
-                                        message: e.target[3].value,
-                                    };
-                                    const res = await fetch("/api/contact", {
-                                        method: "POST",
-                                        headers: { "Content-Type": "application/json" },
-                                        body: JSON.stringify(formData),
-                                    });
-                                    const data = await res.json();
-                                    alert(data.message);
-                                }}
-                            >
-                                <input type="text" placeholder="Your name" required />
-                                <input type="email" placeholder="Your email" required />
-                                <input type="text" placeholder="Subject" required />
-                                <textarea placeholder="Your message" rows="6" required></textarea>
-                                <button type="submit">Send</button>
-                            </form>
+
+                            {!isSent? (
+                                <>
+                                    <h2>Send me a message</h2>
+                                    <form
+                                        onSubmit={async (e) => {
+                                            e.preventDefault();
+                                            const formData = {
+                                                name: e.target[0].value,
+                                                email: e.target[1].value,
+                                                subject: e.target[2].value,
+                                                message: e.target[3].value,
+                                            };
+                                            const res = await fetch("/api/contact", {
+                                                method: "POST",
+                                                headers: { "Content-Type": "application/json" },
+                                                body: JSON.stringify(formData),
+                                            });
+                                            const data = await res.json();
+                                    
+                                            if(res.ok) {
+                                                setIsSent(true);
+                                                // close the modal after 5 sec
+                                                setTimeout(()=> setShowMessageModal(false), 5000); 
+                                            } else {
+                                                alert(data.message);
+                                            }
+                                        }}
+                                    >
+                                        <input type="text" placeholder="Your name" required />
+                                        <input type="email" placeholder="Your email" required />
+                                        <input type="text" placeholder="Subject" required />
+                                        <textarea placeholder="Your message" rows="6" required></textarea>
+                                        <button type="submit">Send</button>
+                                    </form>
+                                </> 
+                                ) : (
+                                    <div className="thank-you-message">
+                                        <h2>Thank you!</h2>
+                                    <p>I’ll reach out to you soon. 🌸</p>
+                                </div>
+                            )}
                         </div>
                     </div>
                 )}

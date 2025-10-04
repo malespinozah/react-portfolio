@@ -13,6 +13,8 @@ export default function Homepage(){
     const [showMessageModal, setShowMessageModal] = useState(false);
     const [isSent, setIsSent] = useState(false);
     const [fadeOut, setFadeOut] = useState(false);
+    // form reset state for controlled reset
+    const [formResetFlag, setFormResetFlag] = useState(false);
 
     useEffect(() => {
         if (location.hash) {
@@ -95,7 +97,12 @@ export default function Homepage(){
                                 className="close-btn"
                                 onClick={() => {
                                     setFadeOut(true);
-                                    setTimeout(() => setShowMessageModal(false), 500);
+                                    setTimeout(() => {
+                                        // Reset the form after closing
+                                        setFormResetFlag(f => !f);
+                                        setIsSent(false);
+                                        setShowMessageModal(false);
+                                    }, 500);
                                 }}
                             >
                                 <FontAwesomeIcon icon={faCircleXmark} className='close-button'/>
@@ -103,45 +110,19 @@ export default function Homepage(){
                             {!isSent ? (
                                 <>
                                     <h2>Send me a message</h2>
-                                    <form
-                                      onSubmit={async (e) => {
-                                        e.preventDefault();
-                                        const form = e.currentTarget;
-                                        const formData = {
-                                          name: form.elements.name.value.trim(),
-                                          email: form.elements.email.value.trim(),
-                                          subject: form.elements.subject.value.trim(),
-                                          message: form.elements.message.value.trim(),
-                                        };
-
-                                        try {
-                                          const res = await fetch("/api/contact", {
-                                            method: "POST",
-                                            headers: { "Content-Type": "application/json" },
-                                            body: JSON.stringify(formData),
-                                          });
-                                          const data = await res.json();
-
-                                          if (res.ok) {
+                                    <FormWithReset
+                                        formResetFlag={formResetFlag}
+                                        onSent={() => {
                                             setIsSent(true);
                                             setFadeOut(true);
-                                            // close the modal after 5 sec
-                                            setTimeout(() => setShowMessageModal(false), 5000);
-                                          } else {
-                                            alert(data.message + (data.detail ? `\nDetail: ${data.detail}` : ""));
-                                          }
-                                        } catch (err) {
-                                          alert("Network error sending message. Please try again.");
-                                          console.error(err);
-                                        }
-                                      }}
-                                    >
-                                      <input name="name" type="text" placeholder="Your name" required />
-                                      <input name="email" type="email" placeholder="Your email" required />
-                                      <input name="subject" type="text" placeholder="Subject" required />
-                                      <textarea name="message" placeholder="Your message" rows="6" required></textarea>
-                                      <button type="submit">Send</button>
-                                    </form>
+                                            setTimeout(() => {
+                                                // Reset the form after closing
+                                                setFormResetFlag(f => !f);
+                                                setIsSent(false);
+                                                setShowMessageModal(false);
+                                            }, 3000);
+                                        }}
+                                    />
                                 </>
                               ) : (
                                 <div className="thank-you-message">
@@ -394,4 +375,53 @@ export default function Homepage(){
             </section>
         </main>
     )
+}
+
+
+// Helper component to handle form reset imperatively
+function FormWithReset({ formResetFlag, onSent }) {
+    const formRef = useRef();
+    // When flag changes, reset form fields
+    useEffect(() => {
+        if (formRef.current) {
+            formRef.current.reset();
+        }
+    }, [formResetFlag]);
+    return (
+        <form
+            ref={formRef}
+            onSubmit={async (e) => {
+                e.preventDefault();
+                const form = e.currentTarget;
+                const formData = {
+                    name: form.elements.name.value.trim(),
+                    email: form.elements.email.value.trim(),
+                    subject: form.elements.subject.value.trim(),
+                    message: form.elements.message.value.trim(),
+                };
+                try {
+                    const res = await fetch("/api/contact", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify(formData),
+                    });
+                    const data = await res.json();
+                    if (res.ok) {
+                        onSent();
+                    } else {
+                        alert(data.message + (data.detail ? `\nDetail: ${data.detail}` : ""));
+                    }
+                } catch (err) {
+                    alert("Network error sending message. Please try again.");
+                    console.error(err);
+                }
+            }}
+        >
+            <input name="name" type="text" placeholder="Your name" required />
+            <input name="email" type="email" placeholder="Your email" required />
+            <input name="subject" type="text" placeholder="Subject" required />
+            <textarea name="message" placeholder="Your message" rows="6" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    );
 }

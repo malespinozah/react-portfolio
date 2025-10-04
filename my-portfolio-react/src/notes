@@ -1,0 +1,8 @@
+               <UXstudyCellTable
+                tableItems={[
+                    {header: "Heuristic Evaluation", cell: ["Evaluated Craigslist using Nielsen's 10 usability heuristics.", "Identified key usability issues and improvement opportunities"]},
+                    {header: "Usability Test Planning", cell: ["Created a detailed usability test plan based on heuristic findings.", "Defined team roles: moderator, note-taker, observer.", "Prepared test environment: lab, equipment, software.", "Recruited and scheduled participants.", "Prepared consent forms and questionnaires.", "Planned session logistics and analysis workflow. Scheduled presentation of findings"]},
+                    {header: "Data Collection & Synthesis", cell: ["Collected raw data from each test session", "Summarized key findings for each task scenario"]},
+                    {header: "Final Report & Presentation", cell: ["Produced the final report with findings, insights, and recommendations", "Presented results to stakeholders"]},
+                ]}
+                />

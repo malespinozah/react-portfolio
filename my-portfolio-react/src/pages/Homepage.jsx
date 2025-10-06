@@ -82,7 +82,10 @@ export default function Homepage(){
                             </p>
                         </div>
                         <div>
-                            <a href="http://"><span><FontAwesomeIcon icon={faFolderOpen}/> view resume</span></a>
+                            <a 
+                            href="https://drive.google.com/file/d/1fMXKPIvHuFWPsMQT8glKccmzWWR5j5Gy/view?usp=sharing"
+                            target="_blank"
+                            rel="noopener noreferrer"><span><FontAwesomeIcon icon={faFolderOpen}/> view resume</span></a>
                             <a href="#" onClick={(e) => {
                                 e.preventDefault();
                                 setShowMessageModal(true)

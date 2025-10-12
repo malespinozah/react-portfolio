@@ -14,7 +14,7 @@ export default function WDpage(){
                             <span></span>
                             <span></span>
                         </div>
-                        <video width="100%" src="./public/videos/inkaprestige1.mov" autoPlay muted loop></video>
+                        <video width="100%" src="https://drive.google.com/file/d/1hebEn9HImN7cefOTqpDyImmMc9d19MvI/preview" autoPlay muted loop></video>
                     </div>
                 </div>
             </div>

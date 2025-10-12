@@ -29,7 +29,7 @@ export default function WDprojectsList(){
             wdworktitle: "Death Predictions",
             wdworktags: ['HTML', 'CSS', 'JS'],
             wdworkurl: "/WDpage",
-            wdworkdescription: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum reiciendis quod fugiat quis ducimus fugit expedita, totam laudantium? Assumenda, ipsum. Ratione officiis cum consectetur animi sunt nobis porro incidunt official.",
+            wdworkdescription: "Death Predictions is a playful “useless website” that generates absurdly random outcomes based on your name and birth date. Upon submission, users are greeted with unexpected clips from Happy Tree Friends, blending dark humor with nostalgia in a lighthearted interactive experience.",
             wdimage: "/images/deathpredictions.png",
         },
         {

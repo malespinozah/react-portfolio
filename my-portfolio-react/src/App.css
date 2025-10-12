@@ -1434,12 +1434,12 @@ button {
 
 .work_box_list_wd {
     display: flex;
-    flex-direction: row;
-    padding: 40px;
-    background: #0b0b0b;
-    border-radius: 50px;
-    border: 1px solid #29292a;
+    flex-direction: row-reverse;
     justify-content: space-between;
+}
+
+.work_box_list_wd:last-child {
+    margin-bottom: 45px;
 }
 
 .work_box_list > div {
@@ -1452,14 +1452,25 @@ button {
 }
 
 .work_box_list_wd > div:first-of-type {
-    width: 25%;
+    width: 22%;
+    height: 100%;
+    padding: 5%;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background: var(--backg);
 }
 
 .work_box_list_wd > div:last-of-type {
     width: 65%;
+}
+
+.view_link_list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 5%;
 }
 
 .work_box_list h3 {
@@ -1506,37 +1517,57 @@ button {
 }
 
 
-.work_box_list_wd .work_video_wd, .work_image_wd {
+.work_image_wd {
     width: 100%;
-    border-radius: 8px;
+    border-radius:0 0 8px 8px;
 }
 
 .work_image_ux {
     width: 100%;
 }
 
-.view_link_list {
-    width: 100px;
-    background: linear-gradient(90deg, #9F00F5 0%, #FF7AD7 100%);
-    background-size: 200% auto;
-    animation: moveGradient 3s linear infinite;
-    padding: 10px 15px;
+.work_box_list_wd a {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 7rem;
+    padding: 8px 8px 8px 15px;
     border-radius: 20px;
-    font-size: 13px;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    border: 0.5px solid #9F00F5;
+    background: linear-gradient(90deg, #9F00F5 0%, #FF7AD7 100%);
+    font-family: 'Open Sans';
+    font-size: 0.8rem;
+    color: var(--white);
+    overflow: hidden;
+    letter-spacing: -1px;
     text-align: center;
+    transition: 1s all ease-in-out;
+    position: relative;
+    z-index: 3;
 }
 
-.view_link_list:hover {
+.work_box_list_wd a:before {
+    content: '';
+    position: absolute;
+    inset: 0;
     color: var(--white);
-    animation-play-state: paused;
-    background: linear-gradient(90deg, #9F00F5 0%, #FF7AD7 100%);
-    background-clip: initial;
-    -webkit-background-clip: initial;
-    -webkit-text-fill-color: initial;
+    background: #9F00F5;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    z-index: 0;
+}
+
+.work_box_list_wd a span {
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.view_link_list a:hover::before {
+    opacity: 1;
+}
+
+.view_link_list:hover .icon_read_more {
+    animation: moveWorkIcon 1s ease-in-out 0s 1 normal;
 }
 
 .case_study_link {
@@ -1575,7 +1606,8 @@ button {
 .wd_works_list{
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    align-items: center;
+    gap: 70px;
     padding: 3% 5%;
 }
 
@@ -1614,10 +1646,17 @@ button {
     background: var(--Main-color);
 }
 
+.work_tag_list_wd {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 7px;
+}
+
 .work_filter-tags {
     display: flex;
     justify-content: end;
-    margin-top: 2%;
     padding: 0 5%;
 }
 
@@ -1677,6 +1716,48 @@ button {
 
 .go_to_study:hover .icon_read_more {
     animation: moveWorkIcon 1s ease-in-out 0s 1 normal;
+}
+
+.imag_nav_bar {
+    width: 100%;
+    background: #1a1a1a;
+    height: 7%;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.imag_nav_sec, .imag_nav_others {
+    width: 5%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 2%;
+}
+
+.imag_nav_sec div {
+    width: 10px;
+    height: 10px;
+    border-radius: 100px;
+}
+
+.imag_nav_sec div:nth-child(2) {
+    background: #F2AE2E;
+}
+
+.imag_nav_sec div:first-child {
+    background: #F25252;
+}
+
+.imag_nav_sec div:last-child {
+    background: #26BF30;
+}
+
+.imag_nav_others {
+    color: #606060;
 }
 
 @keyframes moveWorkIcon {
@@ -2503,7 +2584,7 @@ button {
 
     .wrapper_about .side-image {
         width: 80%;
-        height: 40%;
+        height: 30%;
     }
 
     .wrapper_about .side-about div {
@@ -2518,12 +2599,12 @@ button {
     .about-photo {
         background-repeat: no-repeat;
         height: 100%;
-        width: 50%;
+        width: 45%;
     }
 
     .wrapper_about .side-about {
-        width: 80%;
-        gap: 30px;
+        width: 90%;
+        gap: 20px;
     }
 
     .wrapper_highlights {
@@ -2614,19 +2695,18 @@ button {
     }
 
     .view_info_work > div {
-        gap: 10px;
         width: 100%;
         height: 40%;
     }
 
     .work_tag_list {
-        width: 50%;;
+        width: 60%;;
         gap: 3px;
         justify-content: space-between;
     }
 
     .go_to_study {
-        width: 50%;
+        width: 40%;
         height: 100%;
         align-items: end;
     }
@@ -2955,6 +3035,10 @@ button {
     .ux_works_list {
         padding: 5%;
         justify-content: center;
+    }
+
+    .ux_works_list h3 {
+        font-size: 23px;
     }
 
     .work_box_list_ux {

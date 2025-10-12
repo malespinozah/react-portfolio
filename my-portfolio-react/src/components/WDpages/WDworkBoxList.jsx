@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTag } from '@fortawesome/free-solid-svg-icons';
+import { faTag, faCircleArrowRight, faArrowUpFromBracket, faPlus } from '@fortawesome/free-solid-svg-icons';
 
 export default function WDworkBoxList({wdworktitle, wdworkdescription, wdworkurl, wdworktags, wdimage}) {
     return(
@@ -16,9 +16,20 @@ export default function WDworkBoxList({wdworktitle, wdworkdescription, wdworkurl
                     </div>
                      <p>{wdworkdescription}</p>
                 </div>
-                <a href={wdworkurl} className='view_link_list' target="_blank" rel="noopener noreferrer">More Info</a>
+                <div className='view_link_list'>
+                    <a href={wdworkurl} target="_blank" rel="noopener noreferrer"><span>Read More</span><FontAwesomeIcon icon={faCircleArrowRight} className='icon_read_more'/></a>
+                </div>
             </div>
             <div>
+                <div className="imag_nav_bar">
+                    <div className="imag_nav_sec">
+                        <div></div><div></div><div></div>
+                    </div>
+                    <div className="imag_nav_others">
+                        <FontAwesomeIcon icon={faArrowUpFromBracket}/>
+                        <FontAwesomeIcon icon={faPlus}/>
+                    </div>
+                </div>
                 <img 
                 src={wdimage} 
                 alt="prototype view image" 

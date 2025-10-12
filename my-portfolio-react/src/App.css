@@ -3051,12 +3051,13 @@ button {
         padding-bottom: 20px;
         border: none;
         border-radius: 0 0 20px 20px;
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     }
 
     .work_box_list_wd > div:first-of-type {
         width: 90%;
-        padding: 0 5%;
+        padding: 5%;
+        margin-top: 6%;
+        border-radius: 0 0 20px 20px
     }
 
     .work_box_list_wd > div:last-of-type {
@@ -3064,9 +3065,31 @@ button {
         height: 230px;
     }
 
+    .imag_nav_bar {
+        height: 10%;
+    }
+
+    .imag_nav_sec {
+        width: 10%;
+    }
+
+    .imag_nav_others {
+        width: 8%;
+        font-size: 12px;
+    }
+
+    .imag_nav_sec div {
+        width: 8px;
+        height: 8px;
+    }
+
     .work_image_wd {
         height: 230px;
-        border-radius: 8px 8px 0 0;
+        border-radius: 0;
+    }
+
+    .wd_works_list {
+        gap: 20px;
     }
 
     .wd_works_list h3 {
@@ -3084,6 +3107,10 @@ button {
 
     .view_link_list {
         margin: 0 auto;
+    }
+
+    .work_box_list_wd a {
+        margin: 10% 0;
     }
     
 }

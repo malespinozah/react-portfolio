@@ -6,7 +6,7 @@ export default function UXprojectsList(){
     const projects = [
         {
             uxworktitle: "Mamma Martino's Website & App",
-            uxworktags: ['InformationArchitecture', 'Prototypes', 'IndependentInitiative'],
+            uxworktags: ['InformationArchitecture', 'Prototypes', 'BeyondTheBrief'],
             uxworkdescription: "Mamma Martino's is an Italian restaurant seeking to improve the customer experience by introducing delivery and pickup services.",
             uxworkurl:"/UXDesign/MammaMartinos",
             uximageurl:"/images/macbook_iphone_mm.png",

@@ -1,15 +1,25 @@
+import { useState } from "react";
 import { Link as ScrollLink } from "react-scroll"
 import { NavLink, useLocation } from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronDown} from '@fortawesome/free-solid-svg-icons'
+import { faChevronDown, faBars, faTimes} from '@fortawesome/free-solid-svg-icons'
 
 export default function Nav() {
     const location = useLocation();
     const isHome = location.pathname === "/";
+    const [menuOpen, setMenuOpen] = useState(false);
+    const [dropdownOpen, setDropdownOpen] = useState(false);
+
+    const toggleMenu = () => setMenuOpen(!menuOpen);
+    const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
 
     return (
-        <nav id="main-navigation">
-            <ul>
+        <nav id="main-navigation" className={menuOpen ? "open" : ""}>
+            {/* Hamburguer botton visible on mobile only */}
+            <button className="menu-toggle" onClick={toggleMenu}>
+                <FontAwesomeIcon icon={menuOpen ? faTimes : faBars}/>
+            </button>
+            <ul className={menuOpen ? "nav-list active" : "nav-list"}>
                 <li>
                     {isHome ? (
                         <ScrollLink 
@@ -18,9 +28,13 @@ export default function Nav() {
                           activeClass="visited"
                           offset={-100}
                           duration={500}
-                          className="link_nav">Home</ScrollLink>
+                          className="link_nav"
+                          onClick={() => setMenuOpen(false)}>Home</ScrollLink>
                     ) : (
-                        <NavLink to="/" className="link_nav">Home</NavLink>
+                        <NavLink 
+                        to="/" 
+                        className="link_nav" 
+                        onClick={() => setMenuOpen(false)}>Home</NavLink>
                     )}
                 </li>
                 <li>
@@ -30,9 +44,13 @@ export default function Nav() {
                           spy={true}
                           activeClass="visited"
                           duration={500}
-                          className="link_nav">About</ScrollLink>
+                          className="link_nav"
+                          onClick={() => setMenuOpen(false)}>About</ScrollLink>
                     ) : (
-                        <NavLink to="/#about-me" className="link_nav">About</NavLink>
+                        <NavLink 
+                        to="/#about-me" 
+                        className="link_nav"
+                        onClick={() => setMenuOpen(false)}>About</NavLink>
                     )}
                 </li>
                 <li>
@@ -42,9 +60,13 @@ export default function Nav() {
                           spy={true}
                           activeClass="visited"
                           duration={500}
-                          className="link_nav">Highlights</ScrollLink>
+                          className="link_nav"
+                          onClick={() => setMenuOpen(false)}>Highlights</ScrollLink>
                     ) : (
-                        <NavLink to="/#highlights" className="link_nav">Highlights</NavLink>
+                        <NavLink 
+                        to="/#highlights" 
+                        className="link_nav"
+                        onClick={() => setMenuOpen(false)}>Highlights</NavLink>
                     )}
                 </li>
                 <li>
@@ -54,19 +76,38 @@ export default function Nav() {
                           spy={true}
                           activeClass="visited"
                           duration={500}
-                          className="link_nav">Skills</ScrollLink>
+                          className="link_nav"
+                          onClick={() => setMenuOpen(false)}>Skills</ScrollLink>
                     ) : (
-                        <NavLink to="/#my-skills" className="link_nav">Skills</NavLink>
+                        <NavLink 
+                        to="/#my-skills" 
+                        className="link_nav"
+                        onClick={() => setMenuOpen(false)}>Skills</NavLink>
                     )}
                 </li>
 
-                <div className="dropdown">
-                    <div className="drpbtn"><span className="dprlabel">Portfolio</span>
+                {/* dropdown with click for mobile */}
+                <div 
+                className={`dropdown ${dropdownOpen ? "active" : ""}`}
+                onClick={(e) => {
+                    // only to activate in mobile
+                    if (window.innerWidth <= 900) {
+                        e.preventDefault();
+                        setDropdownOpen(!dropdownOpen);
+                    }
+                }}
+                >
+                    <div className="drpbtn">
+                        <span className="dprlabel">Portfolio</span>
                         <FontAwesomeIcon icon={faChevronDown} className="drpicon"/>
                     </div>
-                    <div className="dropdown-content">
-                        <NavLink to="/UXDesign/List">UX Design</NavLink>
-                        <NavLink to="/WebDevelopment/List">Web Development</NavLink>
+                    <div className={`dropdown-content ${dropdownOpen ? "show" : ""}`}>
+                        <NavLink 
+                        to="/UXDesign/List"
+                        onClick={() => setMenuOpen(false)}>UX Design</NavLink>
+                        <NavLink
+                        to="/WebDevelopment/List"
+                        onClick={() => setMenuOpen(false)}>Web Development</NavLink>
                     </div>
                 </div>
             </ul>

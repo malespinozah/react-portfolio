@@ -37,7 +37,7 @@ export default function Homepage(){
                 <div className='wrapper_profile'>
                     <div className="wrap_profile">
                         <div className="profile-photo">
-                            <img src="/images/profile.jpg" alt="profile" />
+                            <img src="/images/profile.png" alt="profile" />
                         </div>
                         <div className="profile-tag">Web Developer & UX Designer</div>
                     </div>
@@ -57,11 +57,7 @@ export default function Homepage(){
             <section id='about-me'>
                 <div className="wrapper_about">
                     <div className='side-image'>
-                        <img src="/images/profile.jpg" alt="about-photo"/>
-                        <div className="about-tag">
-                                <span>Transforming ideas into digital realities,</span>
-                                <span>with the harmony of design and development.</span>
-                        </div>
+                        <div className="about-photo"></div>
                     </div>
                     <div className='side-about'>
                         <div>

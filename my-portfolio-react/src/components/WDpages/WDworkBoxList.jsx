@@ -7,7 +7,7 @@ export default function WDworkBoxList({wdworktitle, wdworkdescription, wdworkurl
             <div>
                 <div className='view_header_work'>
                     <h3>{wdworktitle}</h3>
-                    <div className="work_tag_list">
+                    <div className="work_tag_list_wd">
                        {wdworktags.map((tag, index) => (
                           <span key={index} className='work_tag_item'>
                                <FontAwesomeIcon icon={faTag} className='work_tag_icon_list'/> {tag}

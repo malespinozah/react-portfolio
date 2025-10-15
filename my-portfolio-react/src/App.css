@@ -1829,7 +1829,7 @@ button {
     letter-spacing: 0px;
 }
 
-.UXstudyTag {
+.UXstudyTag, .WDstudyTag {
     display: inline-block;
     position: relative;
     border: 1px solid #FF7AD7;
@@ -1842,7 +1842,7 @@ button {
     margin: 0;
 }
 
-.icon_UXstudyTag {
+.icon_UXstudyTag, .icon_WDstudyTag {
     color: #FF7AD7;
     margin-right: 5px;
 }
@@ -1975,7 +1975,7 @@ button {
   border-radius: 4px;      
 }
 
-.UXBlockText {
+.UXBlockText, .WDBlockText {
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
     line-height: 2em;
@@ -1984,7 +1984,7 @@ button {
     margin: 2% 0;
 }
 
-.UXBlockText b {
+.UXBlockText b, .WDBlockText b {
     background: linear-gradient(90deg, #9F00F5 0%, #FF7AD7 100%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -2123,7 +2123,7 @@ button {
 
 .WDprojectBox {
     width: 100%;
-    height: 700px;
+    height: 755px;
     background: var(--Main-color);
 }
 
@@ -2131,13 +2131,14 @@ button {
     width:100%;
     height: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
 }
 
 .WDprojectInfo {
-    width: 20%;
-    height: 510px;
+    margin: 0 auto;
+    width: 80%;
+    padding: 5% 0;
 }
 
 .WDprojectTitle {
@@ -2148,9 +2149,10 @@ button {
 }
 
 .videoPayerProject {
-    width: 60%;
-    height: 510px;
+    width: auto;
+    height: 600px;
     border-radius: 10px;
+    margin-top: -55px;
 }
 
 .videoNavView {

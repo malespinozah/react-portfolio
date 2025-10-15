@@ -7,14 +7,14 @@ export default function WDprojectsList(){
         {
             wdworktitle: "Inka Prestige",
             wdworktags: ['WordPress', 'HTML', 'CSS', 'Plugins'],
-            wdworkurl: "/WDpage",
+            wdworkurl: "/WebDevelopment/InkaPrestige",
             wdworkdescription: "This is a Peruvian Restaurant Website. You can order for delivery or pickup, book a table and have a loyalty program if you sign up.",
             wdimage: "/images/inkaprestige.png",
         },
         {
             wdworktitle: "Bella Mia",
             wdworktags: ['Pug', 'CSS', 'JS', 'Node.js', 'MongoDB', 'SQL'],
-            wdworkurl: "/WDpage",
+            wdworkurl: "/WebDevelopment/BellaMia",
             wdworkdescription: "This is a Website for a jewerly store, which was created using node express and mongodb for database. The shop and faq links are the only functional pages.",
             wdimage: "/images/bellamia.png",
         },

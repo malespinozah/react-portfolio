@@ -51,7 +51,7 @@ export default function Homepage(){
                 </div>
                 <div className="button-to-section">
                     <a href="#about-me">
-                    <img src="/images/cherry.png" alt="" srcset="" /><span>explore</span></a>
+                    <img src="/images/cherry.png" alt="cherry-flower" /><span>explore</span></a>
                 </div>
             </section>
             <section id='about-me'>

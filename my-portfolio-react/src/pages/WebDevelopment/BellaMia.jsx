@@ -1,12 +1,12 @@
-import WDsectionView from "../components/WDpages/WDsectionView";
-import WDTag from "../components/WDpages/WDTag";
-import WDstudyBlockText from "../components/WDpages/WDBlockText";
+import WDstudyBlockText from "../../components/WDpages/WDBlockText";
+import WDsectionView from "../../components/WDpages/WDsectionView";
+import WDTag from "../../components/WDpages/WDTag";
 
-export default function WDpage(){
+export default function BellaMia() {
     return(
         <main id="main">
             <WDsectionView
-            videoLink="https://www.dropbox.com/scl/fi/pzb7f2huum8xz2ynu9n40/inkagestige1.mov?rlkey=lhz9wv7gqei3rrro7e2qzjm0i&st=9jfsgcid&raw=1"
+            videoLink="https://www.dropbox.com/scl/fi/gmdv6jvnrzrvol72hbgyw/bellamia.mov?rlkey=4py0vxm3y9wxgoygtj8z4yq2l&st=9po0rin7&raw=1"
             />
             <section className="WD_projectContent">
                 <div className="WDprojectInfo">
@@ -32,9 +32,6 @@ export default function WDpage(){
                     </WDstudyBlockText>
                 </div>
             </section>
-            <WDsectionView
-            videoLink="https://www.dropbox.com/scl/fi/lvolyb5ec1s94348ycqch/inkaprestige2.mov?rlkey=ah1ncb1fpb9bas96zdabov835&st=24wuenpk&raw=1"
-            />
         </main>
     );
 }

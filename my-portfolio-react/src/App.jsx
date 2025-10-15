@@ -12,7 +12,6 @@ import Footer from './components/Footer'
 
 // Global Pages Routes
 import Homepage from './pages/Homepage'
-import UXpage from './pages/UXpage'
 import Error404 from './pages/Error404'
 import WDpage from './pages/WDpage'
 import Draftpage from './pages/draftpage'
@@ -29,6 +28,8 @@ import LocalsToronto from './pages/UXDesign/LocalsToronto'
 
 // WD Pages Routes
 import WDprojectsList from './pages/WebDevelopment/List'
+import TheInkaPrestige from './pages/WebDevelopment/TheInkaPrestige'
+import BellaMia from './pages/WebDevelopment/BellaMia'
 
 function App() {
   return (
@@ -36,7 +37,6 @@ function App() {
     <Header/>
       <Routes>
         <Route path='/' element={<Homepage/>}></Route>
-        <Route path='/UXpage' element={<UXpage/>}></Route>
         <Route path='/Error404' element={<Error404/>}></Route>
         <Route path='/WDpage' element={<WDpage/>}></Route>
         <Route path='/draftpage' element={<Draftpage/>}></Route>
@@ -49,6 +49,8 @@ function App() {
         <Route path='/UXDesign/Loblaws' element={<Loblaws/>}></Route>
         <Route path='/UXDesign/MammaMartinos' element={<MMartinos/>}></Route>
         <Route path='/WebDevelopment/List' element={<WDprojectsList/>}></Route>
+        <Route path='/WebDevelopment/InkaPrestige' element={<TheInkaPrestige/>}></Route>
+        <Route path='/WebDevelopment/BellaMia' element={<BellaMia/>}></Route>
       </Routes>
     <Footer/>
     </BrowserRouter>

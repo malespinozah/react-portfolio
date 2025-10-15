@@ -1,8 +1,8 @@
-import WDsectionView from "../components/WDpages/WDsectionView";
-import WDTag from "../components/WDpages/WDTag";
-import WDstudyBlockText from "../components/WDpages/WDBlockText";
+import WDstudyBlockText from "../../components/WDpages/WDBlockText";
+import WDsectionView from "../../components/WDpages/WDsectionView";
+import WDTag from "../../components/WDpages/WDTag";
 
-export default function WDpage(){
+export default function TheInkaPrestige() {
     return(
         <main id="main">
             <WDsectionView

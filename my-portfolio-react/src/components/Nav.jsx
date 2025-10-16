@@ -15,9 +15,9 @@ export default function Nav() {
 
     const handleLanguageChange = async (e) => {
         const selectedLang = e.target.value;
-        console.log("Idioma seleccionado:", selectedLang);
+        /*console.log("Idioma seleccionado:", selectedLang);*/
 
-        /*const response = await fetch("/api/translate", {
+        const response = await fetch("/api/translate", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
@@ -27,7 +27,7 @@ export default function Nav() {
         });
         
         const data = await response.json();
-        console.log("Traducción:", data.translations[0].text);*/
+        console.log("Traducción:", data.translations[0].text);
     };
 
     return (

@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTag, faCircleArrowRight, faArrowUpFromBracket, faPlus } from '@fortawesome/free-solid-svg-icons';
 
-export default function WDworkBoxList({wdworktitle, wdworkdescription, wdworkurl, wdworktags, wdimage}) {
+export default function WDworkBoxList({wdworktitle, wdworkdescription, wdworkurl, wdbutton, wdworktags, wdimage}) {
     return(
         <div className="work_box_list_wd">
             <div>
@@ -17,7 +17,7 @@ export default function WDworkBoxList({wdworktitle, wdworkdescription, wdworkurl
                      <p>{wdworkdescription}</p>
                 </div>
                 <div className='view_link_list'>
-                    <a href={wdworkurl} target="_blank" rel="noopener noreferrer"><span>Read More</span><FontAwesomeIcon icon={faCircleArrowRight} className='icon_read_more'/></a>
+                    <a href={wdworkurl} target="_blank" rel="noopener noreferrer"><span>{wdbutton}</span><FontAwesomeIcon icon={faCircleArrowRight} className='icon_read_more'/></a>
                 </div>
             </div>
             <div>

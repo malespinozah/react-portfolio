@@ -5,9 +5,18 @@ export default function WDprojectsList(){
     const [filterTag, setFilterTag] = useState("");
     const projects = [
         {
+            wdworktitle: "Finding Events App",
+            wdworktags: ['HTML', 'CSS', 'JS', 'Laravel'],
+            wdworkurl: "https://github.com/malespinozah/Finding-Events-App",
+            wdbutton: "Git Hub",
+            wdworkdescription: "This app was built to manage and mapping events according to the location of cities, in this case is Toronto. Users with an account can create, update, delete events. Users with no account can only see the events with their information. This app was initially built in C#, I switched it to Laravel.",
+            wdimage: "/images/findingevents.png",
+        },
+        {
             wdworktitle: "Inka Prestige",
             wdworktags: ['WordPress', 'HTML', 'CSS', 'Plugins'],
             wdworkurl: "/WebDevelopment/InkaPrestige",
+            wdbutton: "Read more",
             wdworkdescription: "This is a Peruvian Restaurant Website. You can order for delivery or pickup, book a table and have a loyalty program if you sign up.",
             wdimage: "/images/inkaprestige.png",
         },
@@ -15,36 +24,33 @@ export default function WDprojectsList(){
             wdworktitle: "Bella Mia",
             wdworktags: ['Pug', 'CSS', 'JS', 'Node.js', 'MongoDB', 'SQL'],
             wdworkurl: "/WebDevelopment/BellaMia",
-            wdworkdescription: "This is a Website for a jewerly store, which was created using node express and mongodb for database. The shop and faq links are the only functional pages.",
+            wdbutton: "Read More",
+            wdworkdescription: "This is a Website for a jewerly store, which was created using Node Express and MongoDB for database. The shop and faq links are the only functional pages.",
             wdimage: "/images/bellamia.png",
         },
         {
             wdworktitle: "Favourite Music",
-            wdworktags: ['PHP', 'CSS', 'SQL'],
-            wdworkurl: "/WDpage",
-            wdworkdescription: "This is my first simple page using PHP and mySQL to connect database and displaying with PHP",
-            wdimage: "/images/favorite_music.mov",
+            wdworktags: ['PHP', 'CSS', 'SQL', 'Bootstrap 5'],
+            wdworkurl: "/WebDevelopment/FavouriteMusic",
+            wdbutton: "Read More",
+            wdworkdescription: "This is a basic app built with Laravel and mySQL. Bootstrap 5 was used for design. It was a group project for Web Development. You can add your favourite artists and saved the albums you liked the most.",
+            wdimage: "/images/favouritemusic.png",
         },
         {
             wdworktitle: "Death Predictions",
             wdworktags: ['HTML', 'CSS', 'JS'],
-            wdworkurl: "/WDpage",
-            wdworkdescription: "Death Predictions is a playful “useless website” that generates absurdly random outcomes based on your name and birth date. Upon submission, users are greeted with unexpected clips from Happy Tree Friends, blending dark humor with nostalgia in a lighthearted interactive experience.",
+            wdworkurl: "https://github.com/malespinozah/DeathPrediction",
+            wdbutton: "Git Hub",
+            wdworkdescription: "Death Predictions is a playful “useless website” that generates absurdly random outcomes based on your name and birth date. Upon submission, users are greeted with unexpected clip from Happy Tree Friends, blending dark humor with nostalgia in a lighthearted interactive experience.",
             wdimage: "/images/deathpredictions.png",
         },
         {
             wdworktitle: "Music Helper",
             wdworktags: ['HTML', 'CSS', 'JS'],
-            wdworkurl: "/WDpage",
+            wdworkurl: "https://github.com/malespinozah/Music-Helper",
+            wdbutton: "Git Hub",
             wdworkdescription: "A timer which music that will help you to finish your daily tasks. Timer doesn't have a pause button to make sure user will not extend their time to finish a task.",
             wdimage: "/images/musichelper.png",
-        },
-        {
-            wdworktitle: "Finding Events App",
-            wdworktags: ['HTML', 'CSS', 'JS', 'C#'],
-            wdworkurl: "/WDpage",
-            wdworkdescription: "This app was built to manage and mapping events according to the location of cities, in this case is Toronto. Users with an account can create, update, delete events. Users with no account can only see the events with their information.",
-            wdimage: "/images/findingevents.png",
         },
     ];
     const uniqueTags = [...new Set(projects.flatMap(p => p.wdworktags))];
@@ -74,6 +80,7 @@ export default function WDprojectsList(){
                 wdworktitle={project.wdworktitle}
                 wdworktags={project.wdworktags}
                 wdworkurl={project.wdworkurl}
+                wdbutton={project.wdbutton}
                 wdworkdescription={project.wdworkdescription}
                 wdimage={project.wdimage}
                 />

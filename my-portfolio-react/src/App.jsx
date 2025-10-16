@@ -30,6 +30,7 @@ import LocalsToronto from './pages/UXDesign/LocalsToronto'
 import WDprojectsList from './pages/WebDevelopment/List'
 import TheInkaPrestige from './pages/WebDevelopment/TheInkaPrestige'
 import BellaMia from './pages/WebDevelopment/BellaMia'
+import FavouriteMusic from './pages/WebDevelopment/FavouriteMusic'
 
 function App() {
   return (
@@ -51,6 +52,7 @@ function App() {
         <Route path='/WebDevelopment/List' element={<WDprojectsList/>}></Route>
         <Route path='/WebDevelopment/InkaPrestige' element={<TheInkaPrestige/>}></Route>
         <Route path='/WebDevelopment/BellaMia' element={<BellaMia/>}></Route>
+        <Route path='/WebDevelopment/FavouriteMusic' element={<FavouriteMusic/>}></Route>
       </Routes>
     <Footer/>
     </BrowserRouter>

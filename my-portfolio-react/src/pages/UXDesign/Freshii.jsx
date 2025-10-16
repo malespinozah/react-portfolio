@@ -4,6 +4,7 @@ import UXstudyBlockText from "../../components/UXpages/UXstudyBlockText";
 import UXstudyQuickInfo from "../../components/UXpages/UXstudyQuickInfo";
 import UXTag from "../../components/UXpages/UXtag";
 import UXTitle from "../../components/UXpages/UXtitle";
+import FigmaEmbed from "../../components/UXpages/UXprototype";
 
 export default function Freshii(){
     return(
@@ -113,6 +114,16 @@ export default function Freshii(){
                         </UXstudyBlockText>
                     </div>
                 </div>
+            </section>
+            <section className="UX_prototype">
+                <FigmaEmbed
+                urlprototype="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/30E5W00KkZUiD1a44QdKK3/Freshii?page-id=0%3A1&node-id=1-10&viewport=463%2C1018%2C0.52&t=kfMYyB3I03pmtwaL-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A10"
+                title="Freshii Website Prototype"
+                />
+                <FigmaEmbed
+                urlprototype="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/30E5W00KkZUiD1a44QdKK3/Freshii?page-id=41%3A1555&node-id=41-1203&viewport=213%2C-585%2C0.33&t=AJKk3Roy74tRvT9Y-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=34%3A3336"
+                title="Freshii Mobile Prototype"
+                />
             </section>
         </main>
     );

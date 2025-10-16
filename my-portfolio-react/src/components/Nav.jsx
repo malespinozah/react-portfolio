@@ -12,24 +12,7 @@ export default function Nav() {
 
     const toggleMenu = () => setMenuOpen(!menuOpen);
     const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
-
-    const handleLanguageChange = async (e) => {
-        const selectedLang = e.target.value;
-        /*console.log("Idioma seleccionado:", selectedLang);*/
-
-        const response = await fetch("/api/translate", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-                text: "Hello, world!",
-                targetLang: selectedLang,
-            }),
-        });
-        
-        const data = await response.json();
-        console.log("Traducción:", data.translations[0].text);
-    };
-
+    
     return (
         <nav id="main-navigation" className={menuOpen ? "open" : ""}>
             {/* Hamburguer botton visible on mobile only */}
@@ -127,15 +110,6 @@ export default function Nav() {
                         onClick={() => setMenuOpen(false)}>Web Development</NavLink>
                     </div>
                 </div>
-                <li>
-                    <select 
-                    name="changeLanguage" 
-                    id="changeLanguage"
-                    onChange={handleLanguageChange}>
-                        <option value="en">EN</option>
-                        <option value="es">ES</option>
-                    </select>
-                </li>
             </ul>
         </nav>
     )

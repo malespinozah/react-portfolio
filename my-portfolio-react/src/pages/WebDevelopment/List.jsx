@@ -9,7 +9,7 @@ export default function WDprojectsList(){
             wdworktags: ['HTML', 'CSS', 'JS', 'Laravel'],
             wdworkurl: "https://github.com/malespinozah/Finding-Events-App",
             wdbutton: "Git Hub",
-            wdworkdescription: "This app was built to manage and mapping events according to the location of cities, in this case is Toronto. Users with an account can create, update, delete events. Users with no account can only see the events with their information. This app was initially built in C#, I switched it to Laravel.",
+            wdworkdescription: "This app was built to manage and mapping events according to the location of cities, in this case is Toronto. Users with an account can create, update, delete events. Users with no account can only see the events with their information. Originally built in C#, switched to Laravel recently.",
             wdimage: "/images/findingevents.png",
         },
         {

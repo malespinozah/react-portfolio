@@ -1,12 +1,16 @@
-import { faBriefcase, faDesktop, faUsers, faCalendar, faUsersViewfinder, faPenRuler, faHandSparkles } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
+import { faBriefcase, faDesktop, faUsers, faCalendar, faUsersViewfinder, faPenRuler, faHandSparkles, faBolt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import UXstudyBlockText from "../../components/UXpages/UXstudyBlockText";
 import UXstudyQuickInfo from "../../components/UXpages/UXstudyQuickInfo";
 import UXTag from "../../components/UXpages/UXtag";
 import UXTitle from "../../components/UXpages/UXtitle";
+import FigmaEmbed from "../../components/UXpages/UXprototype";
+import UXUpdatesPanel from "../../components/UXpages/UXupdatesPanel";
 
-export default function MMartinos(){
-    return(
+export default function MMartinos() {
+    const [showUpdates, setShowUpdates] = useState(false);
+    return (
         <main id="main">
             <section className="wrap_work">
                 <div className="wrapper_showinfo">
@@ -112,6 +116,53 @@ export default function MMartinos(){
                         </UXstudyBlockText>
                     </div>
                 </div>
+            </section>
+            <section className="UX_prototype">
+                <UXUpdatesPanel
+                title="Updates: Desktop Prototype"
+                updates={[
+                    {
+                        date: "2025-09-29",
+                        text: "Added improved layout and better responsive behavior.",
+                    },
+                    {
+                        date: "2025-10-02",
+                        text: "Enhanced navigation icons and color palette for accessibility.",
+                    },
+                    {
+                        date: "2025-10-10",
+                        text: "Fixed minor UI bugs in checkout flow.",
+                    },
+                ]}
+                />
+
+                <FigmaEmbed
+                urlprototype="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/z7sgluxJ3YKb4MnQ79EnyK/Mamma-Martinos?page-id=0%3A1&node-id=8-21&viewport=-281%2C-215%2C0.24&t=UUHWdEXdZ9oQRgjF-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=8%3A21"
+                title="Mamma Martino's Website Prototype"
+                />
+                
+                <UXUpdatesPanel
+                title="Updates: Mobile Prototype"
+                updates={[
+                    {
+                        date: "2025-09-29",
+                        text: "Added improved layout and better responsive behavior.",
+                    },
+                    {
+                        date: "2025-09-28",
+                        text: "Pick-up and Delivery frames were built with map and select options. Menu page was also addded and divided in categories for easy navigation.",
+                    },
+                    {
+                        date: "2025-09-27",
+                        text: "Frames created: Landing, sign-in, sign-up, homepage.",
+                    },
+                ]}
+                />
+
+                <FigmaEmbed
+                urlprototype="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/z7sgluxJ3YKb4MnQ79EnyK/Mamma-Martinos?page-id=373%3A12296&node-id=373-12434&viewport=372%2C219%2C0.4&t=YH6aDWgSSCw3FdPI-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=373%3A12434"
+                title="Mamma Martino's Mobile Prototype"
+                />
             </section>
         </main>
     );

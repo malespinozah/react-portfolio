@@ -4,6 +4,7 @@ import UXstudyBlockText from "../../components/UXpages/UXstudyBlockText";
 import UXstudyQuickInfo from "../../components/UXpages/UXstudyQuickInfo";
 import UXTag from "../../components/UXpages/UXtag";
 import UXTitle from "../../components/UXpages/UXtitle";
+import FigmaEmbed from "../../components/UXpages/UXprototype";
 
 export default function LAFitness(){
     return(
@@ -100,6 +101,12 @@ export default function LAFitness(){
                         </UXstudyBlockText>
                     </div>
                 </div>
+            </section>
+            <section className="UX_prototype">
+                    <FigmaEmbed
+                    urlprototype="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/atIi6mQLPsbKQcZ1EN8GrZ/lafitness-proposed-changes?page-id=0%3A1&node-id=20-2&viewport=187%2C443%2C0.26&t=UAR69TptFvA7FdN1-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=20%3A2"
+                    title="LAFitness Website Prototype"
+                    />
             </section>
         </main>
     );    

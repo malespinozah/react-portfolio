@@ -4,6 +4,7 @@ import UXstudyBlockText from "../../components/UXpages/UXstudyBlockText";
 import UXstudyQuickInfo from "../../components/UXpages/UXstudyQuickInfo";
 import UXTag from "../../components/UXpages/UXtag";
 import UXTitle from "../../components/UXpages/UXtitle";
+import FigmaEmbed from "../../components/UXpages/UXprototype";
 
 export default function LocalsToronto() {
     return(
@@ -111,6 +112,12 @@ export default function LocalsToronto() {
                         </UXstudyBlockText>
                     </div>
                 </div>
+            </section>
+            <section className="UX_prototype">
+                <FigmaEmbed
+                urlprototype="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/DcCMonIQvS4DGtnDoV4WgX/IXD-Studio-2---Problem-Space--5--Copy-?page-id=185%3A1648&node-id=188-4492&viewport=699%2C386%2C0.24&t=kO52iT5Y1CWG8tlk-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=188%3A4492"
+                title="LocalsToronto Mobile Prototype"
+                />
             </section>
         </main>
     );

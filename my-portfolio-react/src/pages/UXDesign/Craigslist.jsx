@@ -4,6 +4,7 @@ import UXstudyBlockText from "../../components/UXpages/UXstudyBlockText";
 import UXstudyQuickInfo from "../../components/UXpages/UXstudyQuickInfo";
 import UXTag from "../../components/UXpages/UXtag";
 import UXTitle from "../../components/UXpages/UXtitle";
+import FigmaEmbed from "../../components/UXpages/UXprototype";
 
 export default function CraigslistWork(){    return(
         <main id="main">
@@ -117,6 +118,17 @@ export default function CraigslistWork(){    return(
                         </UXstudyBlockText>
                     </div>
                 </div>
+            </section>
+            <section className="UX_prototype">
+                <FigmaEmbed
+                urlprototype="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/vCRSeOvb34Uz1VRZbqhThi/Craigslist?page-id=0%3A1&node-id=1-2&viewport=202%2C375%2C0.19&t=1Vay70KahKUoGul6-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A2"
+                title="Craigslist Website Prototype"
+                />
+
+                <FigmaEmbed
+                urlprototype="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/vCRSeOvb34Uz1VRZbqhThi/Craigslist?page-id=27%3A194&node-id=27-209&viewport=81%2C465%2C0.33&t=rrOi3TDyHUVGQj6P-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=27%3A209"
+                title="Craigslist Mobile Prototype"
+                />
             </section>
         </main>
     );

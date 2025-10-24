@@ -79,7 +79,7 @@ export default function Homepage(){
                         </div>
                         <div>
                             <a 
-                            href="https://drive.google.com/file/d/1fMXKPIvHuFWPsMQT8glKccmzWWR5j5Gy/view?usp=sharing"
+                            href="https://drive.google.com/file/d/1lCuxMQ-bWHrQDP_sOeNT8PM8pJz02xyA/view?usp=sharing"
                             target="_blank"
                             rel="noopener noreferrer"><span><FontAwesomeIcon icon={faFolderOpen}/> view resume</span></a>
                             <a href="#" onClick={(e) => {
@@ -160,7 +160,7 @@ export default function Homepage(){
                             <UXworkBox
                             uxworktitle="Freshii Website & App"
                             uxworktag="Usability Test"
-                            uxworkurl="/UXpage"
+                            uxworkurl="/UXDesign/Freshii"
                             uximageurlone="/images/freshii_macbook_mockup.png"
                             uximageurltwo="/images/freshii_iphone_mockup.png"
                             />

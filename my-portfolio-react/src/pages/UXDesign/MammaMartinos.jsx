@@ -122,16 +122,20 @@ export default function MMartinos() {
                 title="Updates: Desktop Prototype"
                 updates={[
                     {
-                        date: "2025-09-29",
-                        text: "Added improved layout and better responsive behavior.",
-                    },
-                    {
                         date: "2025-10-02",
-                        text: "Enhanced navigation icons and color palette for accessibility.",
+                        text: "Checkout, Order placed, and Location pages added. Components for Order placed status also created. Contact and Reservation pages are left.",
                     },
                     {
-                        date: "2025-10-10",
-                        text: "Fixed minor UI bugs in checkout flow.",
+                        date: "2025-09-28",
+                        text: "Adding real information and photos for menu items. For Pizza section, there is still a pending decision of how it should it work due to customize feature and prices. ",
+                    },
+                    {
+                        date: "2025-09-27",
+                        text: "Menu components were built in order to create the menu page. Considering testin for variables and others functions to work.",
+                    },
+                    {
+                        date: "2025-09-25",
+                        text: "Modifying homepage for a new and modern design.",
                     },
                 ]}
                 />
@@ -146,11 +150,11 @@ export default function MMartinos() {
                 updates={[
                     {
                         date: "2025-09-29",
-                        text: "Added improved layout and better responsive behavior.",
+                        text: "Connecting frames.",
                     },
                     {
                         date: "2025-09-28",
-                        text: "Pick-up and Delivery frames were built with map and select options. Menu page was also addded and divided in categories for easy navigation.",
+                        text: "Pick-up and Delivery frames were built with map and select options. Menu page was also addded and divided in categories for easy navigation. Componente for menu also created.",
                     },
                     {
                         date: "2025-09-27",

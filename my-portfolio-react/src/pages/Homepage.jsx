@@ -149,7 +149,7 @@ export default function Homepage(){
                         <div className="big-column">
                             <UXworkBox
                             uxworktitle="Mamma Martino's Website & App"
-                            uxworktag="UI/UI Design"
+                            uxworktag="UI/UX Design"
                             uxworkurl="/UXDesign/MammaMartinos"
                             uximageurlone="/images/mm_macbook_mockup.png"
                             uximageurltwo="/images/mm_iphone_mockup.png"
@@ -295,7 +295,7 @@ export default function Homepage(){
                             toolName="Node.js"
                             toolLevelB="#00FC3F"
                             toolLevelI="#F8FF00"
-                            toolL
+                            toolLevelA="transparent"
                             />
                             <SkillsTools
                             toolImage="https://i.imgur.com/bAKTR8A.png"
